@@ -25,6 +25,20 @@
         transform: translateX(-50%);
       }
 
+      .video-wrapper {
+        position: relative;
+        width: 560px;
+        height: 315px;
+      }
+
+      .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
       .project-info {
         font-size: 30px;
         text-align: center;
@@ -35,6 +49,15 @@
   </head>
   <body>
     <h1>Cafe Finder</h1>
+    <div class="video-wrapper">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/OaD31sAlmiI"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
     <div class="project-info">
       <p>프로젝트 목표: react native maps 라이브러리 활용한 주변 카페 찾기</p>
       <p>참여 팀원</p>
