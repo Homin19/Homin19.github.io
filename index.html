@@ -7,28 +7,47 @@
     <title>CafeFinder</title>
     <style>
       body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
         margin: 0;
-        flex-direction: column;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
       }
 
       h1 {
         font-size: 50px;
         font-weight: bold;
         margin-bottom: 20px;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        text-align: center; /* 가운데 정렬을 위해 추가 */
       }
 
       .video-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        max-width: 500px; /* 최대 너비 설정 */
+        height: 0;
+        padding-bottom: 56.25%; /* 비율 조정을 위한 padding */
         position: relative;
-        width: 560px;
-        height: 315px;
+        margin-bottom: 20px;
+        margin-left: auto; /* 오른쪽 여백을 위해 추가 */
+        margin-right: auto; /* 왼쪽 여백을 위해 추가 */
       }
 
       .video-wrapper iframe {
@@ -45,14 +64,40 @@
         font-weight: bold;
         margin: 0;
       }
+
+      .image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* 설명을 위아래로 배치하기 위해 추가 */
+    margin-bottom: 20px;
+  }
+
+  .image-wrapper img {
+    max-width: 600px;
+    max-height: 800px;
+    width: auto;
+    height: auto;
+  }
+
+  .image-caption {
+    font-weight: bold;
+    text-align: center;
+  }
+
+      .questionFour {
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+      }
     </style>
   </head>
   <body>
     <h1>Cafe Finder</h1>
     <div class="video-wrapper">
       <iframe
-        width="560"
-        height="315"
+        width="400"
+        height="200"
         src="https://www.youtube.com/embed/OaD31sAlmiI"
         frameborder="0"
         allowfullscreen
@@ -65,5 +110,60 @@
       <p>이호민: DB 설계 및 구축, 메인 기능 구현</p>
       <p>최재연: 프로젝트 기획 및 관리, 문서 작업, 부가 기능, 메인 기능 구현</p>
     </div>
+    <div class="questionFour">
+      <p>프로젝트 요약 및 주요기능 UI 캡쳐</p>
+      <p></p>
+      <p>
+        저희 프로젝트의 기능은 간단히 사용자가 원하는 음료를 브랜드와 관계 없이
+        검색할 수 있고 해당 음료의 판매처까지의 위치와 거리를 확인할 수 있는
+        어플입니다.
+      </p>
+    <div class="image-wrapper">
+    <img
+      src="https://raw.githubusercontent.com/Homin19/Homin19.github.io/main/MainScreen.jpg"
+      alt="메인스크린 화면"
+    />
+    <p class="image-caption">검색을 도와주는 메인 화면 입니다.</p>
+  </div>
+
+  <div class="image-wrapper">
+    <img
+      src="https://raw.githubusercontent.com/Homin19/Homin19.github.io/main/SearchResultScreen.jpg"
+      alt="검색 결과 화면"
+    />
+    <p class="image-caption">검색 결과를 보여주는 화면 입니다.</p>
+  </div>
+
+  <div class="image-wrapper">
+    <img
+      src="https://github.com/Homin19/Homin19.github.io/blob/main/MyLocation.jpg?raw=true"
+      alt="나의 현재 위치"
+    />
+    <p class="image-caption">나의 현재 위치를 보여주는 화면 입니다.</p>
+  </div>
+
+  <div class="image-wrapper">
+    <img
+      src="https://raw.githubusercontent.com/Homin19/Homin19.github.io/main/StoreLocation.jpg"
+      alt="해당 가게 위치"
+    />
+    <p class="image-caption">해당 가게 위치를 보여주는 화면입니다.</p>
+  </div>
+
+  <div class="image-wrapper">
+    <img
+      src="https://raw.githubusercontent.com/Homin19/Homin19.github.io/main/AdminLogin.jpg"
+      alt=""
+    />
+    <p class="image-caption">관리자 모드로 들어가기 위한 로그인 화면 입니다.</p>
+  </div>
+
+  <div class="image-wrapper">
+    <img
+      src="https://raw.githubusercontent.com/Homin19/Homin19.github.io/main/DataManager.jpg"
+      alt="데이터관리자 화면"
+    />
+    <p class="image-caption">데이터를 추가 삭제 업데이트를 할 수 있게 해주는 화면 입니다.</p>
+  </div>
   </body>
 </html>
